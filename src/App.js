@@ -2,7 +2,11 @@ import React from "react"
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./global/global";
 import theme from "./global/theme";
-import HomeIcon from "./pages/home/HomeIcon";
+import AnimalsContainer from "./docs/day04/context/expert/AnimalsContainer";
+// import ParentContainer from "./docs/day04/context/normal/ParentContainer";
+// import ParentContainer from "./docs/day04/context/basic/ParentContainer";
+// import CharContainer from "./docs/day04/context/basic/CharContainer";
+// import PowButton from "./pages/home/PowButton";
 
 
 function App() {
@@ -10,7 +14,11 @@ function App() {
     <>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <HomeIcon />
+      {/* <PowButton /> */}
+      {/* <CharContainer /> */}
+      {/* <ParentContainer /> */}
+      {/* <ParentContainer /> */}
+      <AnimalsContainer />
     </ThemeProvider>
     </>
   );

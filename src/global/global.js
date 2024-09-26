@@ -14,6 +14,10 @@ const GlobalStyle = createGlobalStyle`
     font-style: normal;
   }
 
+  body {
+    line-height: 1.3;
+  }
+
   *{
     box-sizing: border-box;
     text-shadow: 0 0 2px rgba(0, 0, 0, 0.05);
@@ -26,6 +30,7 @@ const GlobalStyle = createGlobalStyle`
 
   button{
     cursor: pointer;
+    border: none;
   }
 `;
 
