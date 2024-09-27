@@ -2,7 +2,11 @@ import React from "react"
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./global/global";
 import theme from "./global/theme";
-import AnimalsContainer from "./docs/day04/context/expert/AnimalsContainer";
+import FormLoginCode from "./docs/day05/formLoginCode/Form";
+// import AnimalsContainer from "./docs/day04/context/expert/AnimalsContainer";
+// import CountContainer from "./docs/day05/redux/count/CountContainer";
+// import FontContainer from "./docs/day05/redux/font/FontContainer";
+// import Counter from "./docs/day05/zustand/Counter";
 // import ParentContainer from "./docs/day04/context/normal/ParentContainer";
 // import ParentContainer from "./docs/day04/context/basic/ParentContainer";
 // import CharContainer from "./docs/day04/context/basic/CharContainer";
@@ -18,7 +22,11 @@ function App() {
       {/* <CharContainer /> */}
       {/* <ParentContainer /> */}
       {/* <ParentContainer /> */}
-      <AnimalsContainer />
+      {/* <AnimalsContainer /> */}
+      {/* <CountContainer /> */}
+      {/* <FontContainer /> */}
+      {/* <Counter /> */}
+      <FormLoginCode />
     </ThemeProvider>
     </>
   );
