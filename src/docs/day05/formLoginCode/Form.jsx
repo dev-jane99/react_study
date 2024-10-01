@@ -36,22 +36,61 @@ const FormLoginCode = () => {
     //get 요청이 아닐때
     // feth("경로", "요청")
       // CRUD(Create), post 요청이라고 함
-    await fetch('http://localhost:4000/user', {
-      method : 'POST',
-      headers : {
-        'Content-Type' :"application/json"
-      },
-      body : JSON.stringify({
-        id : 2,
-        email : data.email,
-        password : data.password
-      })
-    })
+    // await fetch('http://localhost:4000/user', {
+    //   method : 'POST',
+    //   credentials : 'include',
+    //   headers : {
+    //     'Content-Type' :"application/json"
+    //   },
+    //   body : JSON.stringify({
+    //     id : 2,
+    //     email : data.email,
+    //     password : data.password
+    //   })
+    // })
 
-    .then((response) => response.json())
-    .then(console.log)
-    .catch(console.error)
+    // .then((response) => response.json())
+    // .then(console.log)
+    // .catch(console.error)
+
+
+    // DELETE
+    //ID 2
+    // 요청경로 : http://localhost:4000/user
+    if(window.confirm('정말 회원탈퇴 하시겠습니까?')){
+      fetch(`http://localhost:4000/user/2`, {
+        method : 'DELETE',
+        headers : {
+          'Content-Type' : "application/json"
+        },
+        body : JSON.stringify({
+          ...data
+        })
+      }).then((response) => {
+        if(!response.ok){ return console.log(`Error ${response}`)}
+        console.log("회원탈퇴가 완료되었습니다.")
+      })
+    }
+
+
+    //UPDATE
+    // http://localhost:4000/user/1
+    if(window.confirm('정말 정보를 수정하시겠습니까?')){
+      fetch(`http://localhost:4000/user/1`, {
+        method : 'PUT',
+        headers : {
+          'Content-Type' : "application/json"
+        },
+        body : JSON.stringify({
+          ...data
+        })
+      }).then((response) => {
+        if(!response.ok){ return console.log(`Error ${response}`)}
+        console.log("회원정보가 수정되었습니다.")
+      })
+    }
   })}>
+
 
       <label>
         <div style={{display : "flex", flexDirection : "row", justifyContent : "center", alignItems : "center"}}>

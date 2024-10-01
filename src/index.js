@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 // import count from './modules/count';
+// 라우터 코드 추가
+// import {BrowserRouter} from 'react-router-dom'
 
 //리덕스 코드 추가
 import {Provider} from 'react-redux'
@@ -18,10 +20,11 @@ const store = createStore(rootReducer, devToolsEnhancer())
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  //얘는 리덕스만 사용한다.
   <>
-  <Provider store={store}>
-    <App />
-  </Provider>
+    <Provider store={store}>
+      <App />
+    </Provider>
   </>
 );
 
